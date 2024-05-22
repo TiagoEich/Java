@@ -13,22 +13,27 @@ import java.util.Scanner;
  */
 public class ListagemNum {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = 0;
-        if (num < 0) {
-            System.out.println("Informe um número válido!");
-        } else {
+        do {
+
             System.out.print("Informe um número positivo: ");
-            num = Integer.parseInt(scanner.nextLine());
-            System.out.println("\n\n*** Listagem dos números até o seu valor digitado ***\n");
-        }
-        for (int i = 1; i <= num; i++) {
-            System.out.println(i);
-        }
+            while (!scanner.hasNextInt()) {
+                System.out.print("\nInforme um número inteiro válido: ");
+                scanner.next();
+            }
+            num = scanner.nextInt();
+            {
+                System.out.println("\n\n*** Listagem dos números até o seu valor digitado ***\n");
+                for (int i = 1; i <= num; i++) {
+                    System.out.println(i);
+                }
+            }
+        } while (num < 0);
+       
     }
 }
-
 
 /*Desenvolva um algoritmo que leia um número inteiro e positivo. Em seguida, deve
 usar estruturas de repetição para calcular e apresentar uma lista com todos os 
