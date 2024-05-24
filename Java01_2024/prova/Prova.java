@@ -46,7 +46,7 @@ public class Prova {
                     coluna1 = 0;
                 }
             }
-            if (opcao == 2) {
+          else  if (opcao == 2) {
                 if (linha2 > 2) {
                     System.out.println("\nNúmero máximo de jogadores do Grêmio atingido! ");
                 } else {
@@ -69,7 +69,7 @@ public class Prova {
                     coluna2 = 0;
                 }
             }
-            if (opcao == 3) {
+       else  if (opcao == 3) {
                 if (linha1 == 0 && linha2 == 0) {
                     System.out.println("Informe os jogadores primeiramente!");
                 } else {
@@ -91,10 +91,7 @@ public class Prova {
                         System.out.println("Posição do " + (i + 1) + "° jogador: " + vetor2[i][4] + "\n");
                     }
                 }
-            }
-            if (opcao == 4) {
-                System.out.println("\nObrigado por usar nosso serviço!\n\n");
-            }
+       }      
         } while (opcao != 4);
     }
 }
